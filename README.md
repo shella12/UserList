@@ -3,18 +3,18 @@
 - [📖 User List](#about-project)
   - [🛠 Built With](#built-with)
   <!-- - [🚀 Live Demo ](#-live-demo-) -->
-  - [💻 Getting Started ](#getting-started)
+  - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Start server](#start-server)
-    - [Test](#to-test-the-app-run-following-command)
   - [👤 Author ](#author)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
+
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -39,8 +39,6 @@
 </details>
 
 ### Key Features <a name="key-features"></a>
-
-Main features:
 
 - **Displays the list of fetched users**
 - **Displays details of each user**
