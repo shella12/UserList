@@ -5,15 +5,21 @@ const Cards = (props) => {
   const navigate = useNavigate();
   const { users } = props;
   const redirectToDetailsPage = (user) => {
-    navigate("details/" + user.id, {state: user});
+    navigate("details/" + user.id, { state: user });
   };
+  
   return (
-    <div className="user-list">
+    <ul className="user-list">
       {users &&
         users.map((user) => (
-          <Card key={`${user.email}${user.id}`} className="card" user={user} redirectToDetailsPage={redirectToDetailsPage}/>
+          <Card
+            key={`${user.email}${user.id}`}
+            className="card"
+            user={user}
+            redirectToDetailsPage={redirectToDetailsPage}
+          />
         ))}
-    </div>
+    </ul>
   );
 };
 

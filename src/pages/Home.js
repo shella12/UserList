@@ -1,19 +1,23 @@
-import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const Home = () => {
-    const [users,setUsers]=useState([]);
-    useEffect(() =>{
-         fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(json => setUsers(json))
-        .catch(err=> console.log(err));
-    },[]);
-return(
+  
+  const fetchUsers = async () => {
+    const { data } = await axios.get("https://jsonplaceholder.typicode.com/users");
+    return data;
+  };
+
+  const users = useQuery(["Users"], fetchUsers);
+ 
+  if (users.isLoading) return <h1>Loading...</h1>;
+  if (users.isError) return <pre>{JSON.stringify(users.error)}</pre>;
+  return (
     <>
-    <Cards users={users}/>
+      <Cards users={users.data} />
     </>
-);
-}
+  );
+};
 
 export default Home;
