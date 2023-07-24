@@ -106,7 +106,6 @@ a:hover {
   background-color: rgba(128, 128, 128, 0.505);
   border: 1px solid rgba(0, 0, 0, 0.395);
   padding: 2rem;
-  margin: 2% 25%;
 }
 
 .todo {
@@ -196,4 +195,43 @@ form {
   font-size: 2rem;
   font-weight: 300;
   font-family: "Brush Script MT", cursive, sans-serif;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1% 15%;
+}
+
+.todo-heading {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #776c769c;
+  text-align: center;
+}
+
+.todo-input {
+  border: 1px solid #776c76;
+  background: transparent;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.delete-bin {
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+
+.todo-title:read-only  {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.todo-title{
+  background-color: yellow;
+  flex: 1;
 }

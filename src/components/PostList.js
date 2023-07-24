@@ -26,7 +26,7 @@ const PostList = (props) => {
     body: post.body,
     userId: post.userId,
   })
-  .then((response) => setNewPosts([...newPosts, {
+  .then(() => setNewPosts([...newPosts, {
     userId: post.userId,
     id: newPosts.length + 1,
     title: post.title,
